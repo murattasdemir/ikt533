@@ -1,2 +1,4 @@
-# ikt533
-İMÜ, İKT 533 Ders Deposu
+# İKT 533 Ders Deposu
+İstanbul Medeniyet Üniversitesi, İktisat Bölümü
+
+

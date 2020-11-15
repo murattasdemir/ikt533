@@ -1,0 +1,15 @@
+
+*.gz
+*.aux
+*.toc
+*.log
+*.lof
+*.svg
+*.bbl
+*.bib.bak
+*.pdf
+!**/figures/*.pdf
+!**/figures/*.pdf
+/admin
+/temp
+.Rproj.user

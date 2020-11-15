@@ -1,0 +1,249 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  Template for beamer presentation in rmarkdown
+%%  Modified from the original default.latex template
+%%  file of pandoc
+%%  --Murat Taşdemir
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+  12pt,
+  ignorenonframetext,
+  fleqn,
+  aspectratio=43]{beamer}
+   
+\usepackage{pgfpages}
+\setbeamertemplate{caption}[numbered]
+\setbeamertemplate{caption label separator}{: }
+\setbeamercolor{caption name}{fg=normal text.fg}
+\beamertemplatenavigationsymbolsempty
+% Prevent slide breaks in the middle of a paragraph
+\widowpenalties 1 10000
+\raggedbottom
+\setbeamertemplate{part page}{
+  \centering
+  \begin{beamercolorbox}[sep=16pt,center]{part title}
+    \usebeamerfont{part title}\insertpart\par
+  \end{beamercolorbox}
+}
+\setbeamertemplate{section page}{
+  \centering
+  \begin{beamercolorbox}[sep=12pt,center]{part title}
+    \usebeamerfont{section title}\insertsection\par
+  \end{beamercolorbox}
+}
+\setbeamertemplate{subsection page}{
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center]{part title}
+    \usebeamerfont{subsection title}\insertsubsection\par
+  \end{beamercolorbox}
+}
+\AtBeginPart{
+  \frame{\partpage}
+}
+\AtBeginSection{
+  \ifbibliography
+  \else
+    \frame{\sectionpage}
+  \fi
+}
+\AtBeginSubsection{
+  \frame{\subsectionpage}
+}
+
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usetheme[]{metropolis}
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={Regresyon},
+  pdfauthor={Murat Taşdemir},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\newif\ifbibliography
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  Some beamer customization
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+\setbeamertemplate{headline}{}
+\setbeamertemplate{footline}
+{
+ \leavevmode%
+  \hbox{%
+ \begin{beamercolorbox}[wd=.5\paperwidth,ht=2.5ex,dp=1.125ex,leftskip=.3cm,rightskip=.3cm]{author in head/foot}%
+    \usebeamerfont{author in head/foot}\insertshortauthor
+  \end{beamercolorbox}%
+ \begin{beamercolorbox}[wd=.5\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
+    \usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{2em}
+    \insertframenumber{} / \inserttotalframenumber\hspace*{2ex} 
+  \end{beamercolorbox}}%
+  \vskip0pt%
+} 
+
+
+
+\usepackage{polyglossia}
+\setdefaultlanguage{turkish}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{amsmath}
+\usepackage{setspace}
+\usepackage{float}
+\usepackage{multirow}
+\usefonttheme{professionalfonts}
+\usepackage{mathtools}
+\usepackage{unicode-math}
+\setmathfont{TeX Gyre Pagella Math}
+\newcommand*\rot{\rotatebox{90}}
+\AtBeginSection{}
+\let\olditem\item
+\renewcommand{\item}{\olditem\vspace{\fill}}
+\useinnertheme{circles}
+\definecolor{mLightBrown}{HTML}{EB811B}
+\setbeamercolor{itemize item}{fg=mLightBrown}
+\setbeamertemplate{enumerate items}{\bf\insertenumlabel.}
+\setbeamercolor{item projected}{bg=mLightBrown,fg=black}
+\metroset{progressbar=none, numbering=fraction}
+
+\title{Regresyon}
+\subtitle{İKT 533}
+\author[MT]{Murat Taşdemir}
+\date{15 Kasım 2020}
+\institute[İMÜ]{İMÜ}
+
+\begin{document}
+\frame{\titlepage}
+
+\begin{frame}{HANGİ OKULA GİTMELİ?}
+\protect\hypertarget{hangi-okula-gitmeli}{}
+\begin{itemize}
+\tightlist
+\item
+  Özel
+\item
+  Devlet
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Tesadüfileştirme Yerine Regresyon}
+\protect\hypertarget{tesaduxfcfileux15ftirme-yerine-regresyon}{}
+\begin{itemize}
+\item
+  Her zaman tasadüfileştirilmiş deney yapma şansımız yok.
+\item
+  Regresyon kullanarak nedensel etkiyi tahmin edebiliriz (dikkat!)
+\item
+  İki alternatif için de potansiyel sonuçları tanımlayalım.
+\item
+  Özel okullar (üniversite) verilen paraya değer mi? (ABD bağlamında)
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \(Y_{1i}\): özel üniversiteye giden (\(P_i=1\)) \(i\) bireyinin
+    ücreti
+  \item
+    \(Y_{0i}\): \(i\) bireyinin karşıolgusal (\(P_i=0\)) sonucu
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Yapısal (gerçek nedensel) ilişki}
+\protect\hypertarget{yapux131sal-geruxe7ek-nedensel-iliux15fki}{}
+\begin{itemize}
+\item
+  Özel \(Y_{0i}\) lerin (ortalamada) daha yüksek olduğunu varsayalım.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \alert{Dikkat edin} bu \(Y_i\)'nin \(P_i\)'ye bağlı olarak değiştiği
+    anlamına gelir.
+  \item
+    Regresyon kullanarak seçilim yanlılığınız azaltabilir, hatta yok
+    edebiliriz
+  \end{itemize}
+\item
+  \(Y_{0i}=\alpha_i+\eta_i\) ve \(Y_{1i}-Y_{0i}=\beta\) olsun
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \(\alpha_i\): devlet okuluna giden bireyin ortalama ücreti
+  \item
+    \(\eta_i\): tesadüfi kısım
+  \item
+    \(\beta\): özel üniversiteye gitmenin ücretteki etkisi (müdahale
+    etkisi)
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Regresyon ve Koşullu Ortalama Varsayımı (CIA)}
+\protect\hypertarget{regresyon-ve-koux15fullu-ortalama-varsayux131mux131-cia}{}
+\begin{itemize}
+\tightlist
+\item
+  Tesadüfi kısımın beklenen değerinin sıfır olduğunu biliyoruz:
+  \(E[\eta_i]=0\).
+\item
+  Bu gerçek \(E[\eta_i|P_i]\) koşullu beklenen değerinin sıfır olmadığı
+  anlamına \alert{gelmez.}.
+\item
+  Aksine okul seçimini etkileyen başka değişkenler olduğu için
+  \(E[\eta_i|P_i]\neq 0\) olduğunu biliyoruz
+\item
+  \(X_i\) kontrol değişkenlerinin aşağıdaki \emph{koşullu bağımsızlık
+  varsayımı}nı (CIA) sağladığını varsayacağız:
+  \[E[\eta_i|P_i,X_i]=E[\eta_i|X_i]=\gamma'X_i\]
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Regresyon}
+\protect\hypertarget{regresyon}{}
+\begin{itemize}
+\item
+  Buradan \[Y_i=\alpha+\gamma'X_i+\beta P_i+u_i\]
+\item
+  \(\beta\): nedensel etki
+\item
+  \(\gamma\): ilgilenmiyoruz
+\end{itemize}
+\end{frame}
+
+\end{document}
