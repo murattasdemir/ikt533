@@ -8,8 +8,10 @@
 *.bbl
 *.bib.bak
 *.pdf
-!**/figures/*.pdf
-!**/figures/*.pdf
+!problem-sets/*.pdf
+!report/*.pdf
+!output/*.pdf
 /admin
 /temp
 .Rproj.user
+.Rhistory
