@@ -9,9 +9,10 @@
 *.bib.bak
 *.pdf
 .DS_Store
-!problem-sets/*.pdf
-!output/*.pdf
-!report/*.pdf
+!2020-fall/problem-sets/*.pdf
+!2020-fall/output/*.pdf
+!2020-fall/report/*.pdf
+!2020-fall/data/*.pdf
 /admin
 /temp
 .Rproj.user
