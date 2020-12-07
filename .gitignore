@@ -8,9 +8,10 @@
 *.bbl
 *.bib.bak
 *.pdf
+.DS_Store
 !problem-sets/*.pdf
-!report/*.pdf
 !output/*.pdf
+!report/*.pdf
 /admin
 /temp
 .Rproj.user
