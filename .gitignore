@@ -13,6 +13,7 @@
 !2020-fall/output/*.pdf
 !2020-fall/report/*.pdf
 !2020-fall/data/*.pdf
+/2020-fall/data/raw/hia
 /admin
 /temp
 .Rproj.user
